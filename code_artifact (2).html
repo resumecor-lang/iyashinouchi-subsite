@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -93,82 +96,8 @@
 </head>
 <body class="overflow-x-hidden text-lg"> <!-- 全体の標準サイズを text-lg (18px相当) に引き上げ -->
 
-    <!-- HEADER -->
-    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 border-b border-[#EAE3D8] py-2">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
-            <!-- Logo & Brand Title -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="text-brand-green group-hover:scale-105 transition-transform duration-300 flex items-center">
-                    <!-- おうちと空をイメージした完全手描き風ロゴSVG -->
-                    <svg class="w-14 h-14" viewBox="0 0 64 64" fill="none">
-                        <!-- 黄色いお日様ぬりえ -->
-                        <circle cx="50" cy="18" r="8" fill="#FDF3CD" />
-                        <!-- 手書きのおうち線画 -->
-                        <path d="M12 28 L32 10 L52 28" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M18 25 V52 H46 V25" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M26 38 H38 V52 H26 Z" stroke="#4A3B32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#FAF6F0"/>
-                        <!-- 小さな煙突と煙 -->
-                        <path d="M42 19 V15 H46 V23" stroke="#4A3B32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M45 11 Q48 8 46 5" stroke="#4A3B32" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xs text-brand-green font-bold tracking-widest leading-none">障がい者グループホーム</span>
-                    <span class="text-3xl font-black text-brand-text tracking-wider mt-1.5">いやしのおうち</span>
-                </div>
-            </a>
-
-            <!-- Desktop Menu (Enlarged and Spaced Out) -->
-            <nav class="hidden lg:flex items-center gap-9 text-base font-black">
-                <a href="#home" class="text-brand-green hover:opacity-80 transition relative py-2">ホーム<span class="absolute bottom-0 left-0 w-full h-0.5 bg-brand-green rounded-full"></span></a>
-                <a href="#about" class="text-brand-text hover:text-brand-green transition py-2">施設紹介</a>
-                <a href="#guide" class="text-brand-text hover:text-brand-green transition py-2">ご利用案内</a>
-                <a href="#daily" class="text-brand-text hover:text-brand-green transition py-2">1日の流れ</a>
-                <a href="#recruit" class="text-brand-text hover:text-brand-green transition py-2">採用情報</a>
-                <a href="#contact" class="text-brand-text hover:text-brand-green transition py-2">お問い合わせ</a>
-                
-                <!-- CTA Button -->
-                <a href="#contact" class="bg-brand-green text-white hover:bg-brand-green-light px-6 py-3.5 rounded-full flex items-center gap-2.5 shadow-md transition transform hover:-translate-y-0.5 font-black text-sm">
-                    <!-- 手描きタッチのメール/フォームアイコン -->
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    見学・ご相談はこちら
-                </a>
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden p-3 text-brand-text hover:text-brand-green focus:outline-none" aria-label="メニューを開閉">
-                <svg id="hamburger-icon" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-                <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 border-t border-[#EAE3D8] transition duration-200">
-            <div class="px-5 pt-3 pb-8 space-y-3 font-black text-center text-xl">
-                <a href="#home" class="block py-3.5 text-brand-green hover:bg-brand-green-bg rounded-lg">ホーム</a>
-                <a href="#about" class="block py-3.5 text-brand-text hover:bg-brand-green-bg rounded-lg">施設紹介</a>
-                <a href="#guide" class="block py-3.5 text-brand-text hover:bg-brand-green-bg rounded-lg">ご利用案内</a>
-                <a href="#daily" class="block py-3.5 text-brand-text hover:bg-brand-green-bg rounded-lg">1日の流れ</a>
-                <a href="#recruit" class="block py-3.5 text-brand-text hover:bg-brand-green-bg rounded-lg">採用情報</a>
-                <a href="#contact" class="block py-3.5 text-brand-text hover:bg-brand-green-bg rounded-lg">お問い合わせ</a>
-                <a href="#contact" class="w-full bg-brand-green text-white py-4.5 rounded-full flex items-center justify-center gap-2 shadow mt-6 font-black text-lg">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    <span>フォームで見学・相談をする</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
+{% include header.html %}
+    
     <!-- MAIN PAGE CONTENT -->
     <main id="main-content">
 
